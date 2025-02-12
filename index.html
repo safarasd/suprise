@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Little Love Page ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="fade-in">Will You Be My Valentine? ❤️</h1>
+
+        <div class="gallery">
+            <img src="images/1.jpg" alt="Memory 1" class="gallery-img" onclick="openFullScreen(this)">
+            <img src="images/2.jpg" alt="Memory 2" class="gallery-img" onclick="openFullScreen(this)">
+            <img src="images/3.jpg" alt="Memory 3" class="gallery-img" onclick="openFullScreen(this)">
+            <img src="images/4.jpg" alt="Memory 4" class="gallery-img" onclick="openFullScreen(this)">
+            <img src="images/5.jpg" alt="Memory 5" class="gallery-img" onclick="openFullScreen(this)">
+            <img src="images/6.jpg" alt="Memory 6" class="gallery-img" onclick="openFullScreen(this)">
+            <img src="images/7.jpg" alt="Memory 7" class="gallery-img" onclick="openFullScreen(this)">
+            <img src="images/8.jpg" alt="Memory 8" class="gallery-img" onclick="openFullScreen(this)">
+        </div>
+
+        <div class="note">
+            <h2>A Special Message for You 💌</h2>
+            <p>With everything that’s been going on, I just want to take a moment to ask you: will you be my Valentine? 💖 You mean the world to me, and I’d be so happy to spend this day celebrating you. 💕</p>
+        </div>
+
+        <button class="btn" onclick="goToGame()">Yes, of course! 💘</button>
+    </div>
+
+    <!-- Full-Screen Image Popup -->
+    <div id="lightbox" class="lightbox" onclick="closeFullScreen()">
+        <img id="full-img" src="" alt="Full Screen Image">
+    </div>
+
+    <script>
+        function goToGame() {
+            window.location.href = "game.html"; // Redirect to game page
+        }
+
+        function openFullScreen(imgElement) {
+            const fullScreenImg = document.getElementById("full-img");
+            fullScreenImg.src = imgElement.src; // Set clicked image as full-screen image
+            document.getElementById("lightbox").style.display = "flex"; // Show popup
+        }
+
+        function closeFullScreen() {
+            document.getElementById("lightbox").style.display = "none"; // Hide popup when clicked
+        }
+    </script>
+
+</body>
+</html>
